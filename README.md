@@ -1,4 +1,4 @@
 trainingUPM
 ===========
 
-various projects related to the training received at UPM
+Projects related to the training received at Universidad Politécnica de Madrid (UPM)
