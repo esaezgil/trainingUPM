@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h1>Entradas de blog escritas</h1>
+	<p th:each="entrada : ${entradasBlog}">
+		<span th:text="'Nombre ' + ${entrada.nombre}" /> <br />
+		<span th:text="'Título ' + ${entrada.titulo} " /> <br />  
+		<span th:text="'Mensaje ' + ${entrada.mensaje} " /> <br />
+	</p>
+		<a href="/">Volver</a>
+	
+<h1>Comentarios escritos</h1>
+	<p th:each="comment : ${comentarios}">
+		<span th:text="'Nombre ' + ${comment.nombre} " /> <br /> 
+		<span th:text="'Título ' + ${comment.titulo} " /> <br /> 
+		<span th:text="'Mensaje ' + ${comment.mensaje} " /> <br />		
+	</p>
+		<a href="/">Volver</a>
+	</body>
+</html>

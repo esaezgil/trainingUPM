@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+	<h1>Blog de Enrique Saez Gil</h1>
+
+	<a href="/index.html">Nuevo Post</a>
+	<a href="/listarUsers">Listar Usuarios</a>
+	
+
+	<p th:each="blogEntry : ${entryList}">
+		<a th:href="@{/mostrar(numBlogEntry=${blogEntry.id})}">
+		<span th:text="'Nombre ' + ${blogEntry.nombre} " /> <br />
+		</a>
+		<span th:text="'Título ' + ${blogEntry.titulo} " /> <br />
+		<span th:text="'Contenido abreviado: ' + ${blogEntry.mensaje} " /> <br />
+		<span th:text="'Número de comentarios: ' + ${blogEntry.numComments}" /><br />
+		</p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+</head>
+<body>
+	<p>
+		<span th:text="'Nombre ' + ${blogEntry.nombre} " /> <br />
+		<span th:text="'Título ' + ${blogEntry.titulo}" /> <br />  
+		<span th:text="'Contenido completo: ' + ${blogEntry.mensaje}" /> <br />
+	</p>
+		<form action="deleteEntry" method="post">
+		<input type='hidden' id='numBlogEntry' name='numBlogEntry' th:value='${blogEntry.id}'/>	
+		<input type='submit' name ='delete' value='Delete Blog Entry' />
+		</form>	
+		<a href="/">Volver</a>
+	
+<h1>Comments</h1>
+	<p th:each="comment : ${blogEntry.commentList}">
+		<span th:text="'Nombre ' + ${comment.nombre} " /> <br /> 
+		<span th:text="'Título ' + ${comment.titulo} " /> <br /> 
+		<span th:text="'Mensaje: ' + ${comment.mensaje} " /> <br />
+		
+		<form action="deleteEntry" method="post">
+		<input type='hidden' id='numBlogEntry' name='numBlogEntry' th:value='${blogEntry.id}'/>	
+		<input type='hidden' id='idComment' name='idComment' th:value='${comment.id}'/>		
+		<input type='submit' name ='delete' value='Delete comment' />
+		</form>			
+	</p>	
+	
+	<form action="newComment" method="post">
+			<p>
+				<b>Enviar comentario :</b>
+			</p>
+			<br></br>
+			<p align="left">
+				<b>Nombre</b> <input type='text' name='nombre' />
+			</p>
+			<p align="left">
+				<b>Título</b> <input type='text' name='titulo' />
+			</p>			
+			<p align="left">
+				<b>Comentario</b> <input type='text' name='mensaje' />
+			</p>
+        <input type='hidden' id='idBlogEntry' name='idBlogEntry' th:value='${blogEntry.id}'/>
+		<input type='submit' name ='insertar' value='Enviar' />
+	</form>
+	
+
+	</body>
+</html>

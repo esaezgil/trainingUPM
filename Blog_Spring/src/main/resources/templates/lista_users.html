@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+	<h1>Lista de usuarios en el Blog de Enrique Saez Gil</h1>
+
+	<a href="/">Volver</a>
+
+	<p th:each="usuario : ${listaUsuarios}">
+		<a th:href="@{/usuario(usuario=${usuario})}">
+		<span th:text='${usuario}' /> <br />
+		</a>
+	</p>
+</body>
+</html>
