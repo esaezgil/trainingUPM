@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hangdroid</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="multiplayer">Multiplayer</string>
+    <string name="singlePlayer">Single Player</string>
+    <string name="scores">Scores</string>
+    <string name="title">Hangdroid</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="insertText">Insert letter</string>
+    <string name="checkLetter">Check Letter</string>
+    <string name="hyphen">-</string>
+    <string name="title_activity_game_over">GameOverActivity</string>
+    <string name="points">Points</string>
+    <string name="saveScore">Save Score</string>
+    <string name="title_activity_multiplayer">MultiplayerActivity</string>
+    <string name="introduceWord">Introduce a word</string>
+    <string name="play">Play</string>
+    <string name="title_activity_scores">ScoresActivity</string>
+
+</resources>

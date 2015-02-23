@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/imageHangman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/hangdroid_0" />
+
+    <LinearLayout
+        android:id="@+id/layoutAddLetter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/gradient_background"
+        android:gravity="center_vertical|center_horizontal|center" >
+
+        <TextView
+            android:id="@+id/textViewRankingg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insertText"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:maxLength="1" />
+
+        <Button
+            android:id="@+id/buttonCheckLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getInputLetter"
+            android:text="@string/checkLetter"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutAddLetter"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="32dp"
+        android:orientation="horizontal" >
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/missedLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/layoutPoints"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="75dp"
+        android:textColor="@color/red_letters" />
+</RelativeLayout>
